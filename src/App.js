@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import InputShortener from './InputShortener';
 
 function App() {
   return (
-    <div>
-      <h1>URL Shortener</h1>
+    <div className='container'>
+      <InputShortener />
     </div>
   );
 }
