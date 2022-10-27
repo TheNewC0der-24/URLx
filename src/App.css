@@ -1,13 +1,15 @@
 .container {
     height: 80vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .input-container h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    margin-bottom: 1rem;
     color: #fff;
     margin-bottom: 1.5rem;
 }
@@ -25,9 +27,9 @@
     width: 100%;
     padding: 0.5rem 0.2rem 0.5rem 0;
     text-indent: 1rem;
-    font-size: 1rem;
     border: none;
     outline: none;
+    font-size: 1rem;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
@@ -43,12 +45,45 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     font-weight: bold;
-    border: none;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     color: #fff;
     background-color: var(--primary-color);
+    border: none;
     cursor: pointer;
+}
+
+/* Result */
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.result p {
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.result button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+    background: var(--primary-color);
+    border: none;
+}
+
+.result button.copied {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+.noData {
+    color: #fff;
+    font-size: 1rem;
 }
 
 /* Background Animate */
@@ -208,4 +243,14 @@
     height: 87px;
     bottom: -87px;
     animation-delay: 34s;
+}
+
+@media (max-width : 450px) {
+    body {
+        padding: 0 2rem;
+    }
+
+    .input-container button {
+        width: 70%;
+    }
 }
