@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 
+:root {
+  --primary-color: #d7c49eff;
+}
+
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
