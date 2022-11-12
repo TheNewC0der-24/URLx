@@ -6,11 +6,16 @@ import Result from './Result';
 
 function App() {
   return (
-    <div className='container'>
-      <InputShortener />
-      <BackgroundAnimate />
-      <Result />
-    </div>
+    <>
+      <div className='about-button'>
+        <a className="waves-effect waves-light btn">About Us</a>
+      </div>
+      <div className='container'>
+        <InputShortener />
+        <BackgroundAnimate />
+        <Result />
+      </div>
+    </>
   );
 }
 

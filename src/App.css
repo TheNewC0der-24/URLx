@@ -1,3 +1,16 @@
+.about-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+}
+
+.btn {
+    color: #353148 !important;
+    font-weight: bold !important;
+    background-color: var(--primary-color) !important;
+}
+
 .container {
     height: 80vh;
     display: flex;
@@ -24,18 +37,21 @@
 }
 
 .input-container input {
-    width: 100%;
-    padding: 0.5rem 0.2rem 0.5rem 0;
-    text-indent: 1rem;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    width: 100% !important;
+    background: #fff !important;
+    text-indent: 1rem !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 1rem !important;
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 .input-container input::placeholder {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
+    color: #000 !important;
 }
 
 .input-container button {
@@ -248,6 +264,10 @@
 @media (max-width : 450px) {
     body {
         padding: 0 2rem;
+    }
+
+    .about-button {
+        margin-right: 0rem;
     }
 
     .input-container button {
