@@ -47,6 +47,7 @@
     border-bottom-left-radius: 3px !important;
     border-bottom: none !important;
     box-shadow: none !important;
+    font-family: 'Playfair Display', serif;
 }
 
 .input-container input::placeholder {
@@ -57,8 +58,8 @@
 .input-container button {
     padding: 0 1rem;
     height: 3rem;
-    width: 41%;
-    font-size: 0.8rem;
+    width: 45%;
+    font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: bold;
     border-top-right-radius: 3px;
@@ -67,6 +68,7 @@
     background-color: var(--primary-color);
     border: none;
     cursor: pointer;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Result */
@@ -100,6 +102,11 @@
 .noData {
     color: #fff;
     font-size: 1rem;
+}
+
+.copied {
+    background: #fff;
+    color: var(--primary-color);
 }
 
 /* Background Animate */
