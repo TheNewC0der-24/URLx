@@ -1,20 +1,25 @@
 import React from 'react';
 import './App.css';
-import InputShortener from './InputShortener';
-import BackgroundAnimate from './BackgroundAnimate';
-import Result from './Result';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import Main from './Main';
+import AboutUs from './AboutUs';
 
 function App() {
+
   return (
     <>
-      <div className='about-button'>
-        <a className="waves-effect waves-light btn">About Us</a>
-      </div>
-      <div className='container'>
-        <InputShortener />
-        <BackgroundAnimate />
-        <Result />
-      </div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route exact path="/about-us" element={<AboutUs />} />
+        </Routes>
+      </Router>
     </>
   );
 }
