@@ -21,7 +21,7 @@
 }
 
 .input-container h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 3.5rem;
     color: #fff;
     margin-bottom: 1.5rem;
@@ -47,7 +47,7 @@
     border-bottom-left-radius: 3px !important;
     border-bottom: none !important;
     box-shadow: none !important;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .input-container input::placeholder {
@@ -68,7 +68,7 @@
     background-color: var(--primary-color);
     border: none;
     cursor: pointer;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 /* Result */
