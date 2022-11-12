@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import InputShortener from './InputShortener';
@@ -9,15 +9,17 @@ const Main = () => {
 
     const navigate = useNavigate();
 
+    const [inputValue, setInputValue] = useState('');
+
     return (
         <>
             <div className='about-button'>
                 <div onClick={() => navigate("/about-us")} className="waves-effect waves-light btn">About Us</div>
             </div>
             <div className='container'>
-                <InputShortener />
+                <InputShortener setInputValue={setInputValue} />
                 <BackgroundAnimate />
-                <Result />
+                <Result inputValue={inputValue} />
             </div>
         </>
     )
