@@ -73,6 +73,7 @@
 }
 
 /* Result */
+
 .result {
     display: flex;
     align-items: center;
@@ -108,6 +109,8 @@
     background: #fff;
     color: var(--primary-color);
 }
+
+/* Error */
 
 .nav {
     background-color: #353148;
@@ -276,6 +279,35 @@
     animation-delay: 34s;
 }
 
+/* About US */
+.description {
+    font-size: 18px;
+}
+
+a {
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+.desc {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.go-to {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* Footer */
+
 .footer {
     margin-top: 12rem;
     text-align: center;
@@ -286,6 +318,8 @@
     padding: 20px;
     line-height: 1.5;
 }
+
+/* Responsive CSS */
 
 @media (max-width : 450px) {
     .about-button {
