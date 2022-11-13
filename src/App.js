@@ -9,7 +9,7 @@ import {
 
 import Main from './Main';
 import AboutUs from './Pages/AboutUs';
-import Error from './Components/Error';
+import Error from './Pages/Error';
 
 function App() {
 
