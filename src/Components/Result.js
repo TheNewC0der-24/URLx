@@ -43,7 +43,9 @@ const Result = (props) => {
     }, [copied, props.inputValue]);
 
     if (loading) {
-        return <p className="noData">Loading...</p>
+        return (
+            <h5 className="noData">Loading...</h5>
+        )
     }
 
     if (error) {
