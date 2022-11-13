@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer';
 
 const Error = () => {
 
@@ -35,7 +34,6 @@ const Error = () => {
                 </div>
                 <button className='waves-effect waves-light btn' onClick={() => navigate("/")}>Go back and try again</button>
             </div>
-            <Footer />
         </>
     )
 }
