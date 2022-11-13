@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 2rem;
 }
 
 .input-container h1 {
@@ -106,6 +107,14 @@
 .copied {
     background: #fff;
     color: var(--primary-color);
+}
+
+.nav {
+    background-color: #353148;
+}
+
+.error-msg {
+    font-size: 18px;
 }
 
 /* Background Animate */
@@ -267,11 +276,18 @@
     animation-delay: 34s;
 }
 
-@media (max-width : 450px) {
-    body {
-        padding: 0 2rem;
-    }
+.footer {
+    margin-top: 12rem;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    width: 100%;
+    border-top: 5px solid var(--primary-color);
+    padding: 20px;
+    line-height: 1.5;
+}
 
+@media (max-width : 450px) {
     .about-button {
         margin-right: 0rem;
     }
