@@ -12,7 +12,7 @@ const Main = () => {
     return (
         <>
             <Navbar />
-            <div className='container'>
+            <div className='app-container'>
                 <InputShortener setInputValue={setInputValue} />
                 <BackgroundAnimate />
                 <Result inputValue={inputValue} />

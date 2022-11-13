@@ -11,8 +11,8 @@
     background-color: var(--primary-color) !important;
 }
 
-.container {
-    height: 80vh;
+.app-container {
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
