@@ -8,7 +8,20 @@ Shorten It button. You will get the result, copy the shortened URL and share it 
 |React.JS|Materialize CSS|[Shortco API](https://shrtco.de/)|
 |---|---|---|
 
-## PWA
+## Dependencies Installed
+```
+npm i react-router-dom
+npm i react-icons
+npm i react-copy-to-clipboard
+npm i axios
+```
+
+## Lighthouse Report
+<p>
+  <img src="https://github.com/TheNewC0der-24/URLx/blob/master/Lighthouse%20Report.png" width="400">
+  <img src="https://github.com/TheNewC0der-24/URLx/blob/master/PWA.png" width="400">
+</p>
+
 
 ## Preview
 ![image](https://github.com/TheNewC0der-24/URLx/blob/master/Preview.png)
