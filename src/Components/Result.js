@@ -3,21 +3,27 @@ import axios from "axios";
 
 import CopyToClipboard from 'react-copy-to-clipboard';
 
+import { useNavigate } from 'react-router-dom';
+
+
 const Result = (props) => {
+
+    const navigate = useNavigate();
 
     const [shortenUrl, setShortenUrl] = useState("");
     const [copied, setCopied] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
 
     const fetchData = async () => {
         try {
             setLoading(true);
             const response = await axios(`https://api.shrtco.de/v2/shorten?url=${props.inputValue}`);
             setShortenUrl(response.data.result.full_short_link);
-        } catch (error) {
-
+        } catch (err) {
+            setError(err);
         } finally {
-
+            setLoading(false);
         }
     }
 
@@ -25,7 +31,9 @@ const Result = (props) => {
         if (props.inputValue.length > 0) {
             fetchData();
         }
+    }, [props.inputValue]);
 
+    useEffect(() => {
         const timer = setTimeout(() => {
             setCopied(false);
         }, 1000);
@@ -34,20 +42,30 @@ const Result = (props) => {
 
     }, [copied, props.inputValue]);
 
+    if (loading) {
+        return <p className="noData">Loading...</p>
+    }
+
+    if (error) {
+        navigate('/error');
+    }
+
     return (
         <>
-            {loading ? <div className="lds-dual-ring">Loading...</div> : null}
-            {shortenUrl && (
-                <div className="result">
-                    <p>{shortenUrl}</p>
-                    <CopyToClipboard
-                        text={shortenUrl}
-                        onCopy={() => setCopied(true)}
-                    >
-                        <button className={copied ? "copied" : ""}>Copy URL</button>
-                    </CopyToClipboard>
-                </div>
-            )}
+            {
+                shortenUrl &&
+                (
+                    <div className="result">
+                        <p>{shortenUrl}</p>
+                        <CopyToClipboard
+                            text={shortenUrl}
+                            onCopy={() => setCopied(true)}
+                        >
+                            <button className={copied ? "copied" : ""}>{copied ? "Copied!" : "Copy URL"}</button>
+                        </CopyToClipboard>
+                    </div>
+                )
+            }
         </>
     )
 }
