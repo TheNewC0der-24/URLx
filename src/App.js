@@ -8,7 +8,8 @@ import {
 } from 'react-router-dom';
 
 import Main from './Main';
-import AboutUs from './AboutUs';
+import AboutUs from './Pages/AboutUs';
+import Error from './Components/Error';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route exact path="/about-us" element={<AboutUs />} />
+          <Route exact path="/error" element={<Error />} />
         </Routes>
       </Router>
     </>
