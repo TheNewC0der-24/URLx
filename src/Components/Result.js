@@ -40,7 +40,7 @@ const Result = (props) => {
 
         return () => clearTimeout(timer);
 
-    }, [copied, props.inputValue]);
+    }, [copied]);
 
     if (loading) {
         return (
